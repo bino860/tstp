@@ -19,7 +19,7 @@ def hangman(word):
 
     while wrong < len(stages) - 1:
         print("\n")
-        msg = "一文字を予想してね"
+        msg = "１文字を予想してね"
         char = input(msg)
         if char in rletters:
             cind = rletters.index(char)
@@ -35,8 +35,8 @@ def hangman(word):
             print(" ".join(board))
             win = True
             break
-        if not win:
-            print("\n".join(stages[0:wrong+1]))
-            print("あなたの負け！正解は {}.".format(word))
+    if not win:
+        print("\n".join(stages[0:wrong+1]))
+        print("あなたの負け！正解は {}.".format(word))
             
 hangman("cat")
